@@ -8,13 +8,13 @@ public class Main {
             return;
         }
 
-        System.out.print(Formateador.mensajeBienvenida.get() + "\nSeleccione una opción (1-3): ");
+        System.out.print(Procesador.mensajeBienvenida.get() + "\nSeleccione una opción (1-3): ");
         String opcion = scanner.nextLine();
 
-        String resultado = InterfazUsuario.procesarOpcion.apply(opcion).apply(scanner);
+        String resultado = Procesador.procesarOpcion.apply(opcion).apply(scanner);
         System.out.println(resultado);
 
-        boolean seguirContinuando = InterfazUsuario.deberContinuar.apply(opcion);
+        boolean seguirContinuando = Procesador.deberContinuar.apply(opcion);
 
         if (seguirContinuando) {
             System.out.println("\n" + "=".repeat(50));

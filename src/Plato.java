@@ -32,8 +32,8 @@ public class Plato {
     public int hashCode() {
         return Objects.hash(nombre, calorias, tipo);
     }
+
     public enum TipoPlato {
         ENTRADA, PRINCIPAL, POSTRE
     }
 }
-
